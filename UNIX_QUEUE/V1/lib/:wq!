@@ -1,0 +1,128 @@
+#include <iostream>
+#include <vector>
+#include <map>
+#include "queue.h"
+using namespace std;
+
+class CMsg;
+
+CQueue::CQueue(int len)
+{
+    
+    cout<<"CQueue constructor start!"<<endl; 
+    pfront = pend = NULL;
+    Maxlength = len;
+    Currentlength = 0;
+    cout<<"CQueue constructor ok!"<<endl;
+    cout<<"Queue MAX Length is : ["<<Maxlength<<"]"<<endl;
+}
+
+CQueue::~CQueue()
+{
+    Currentlength = 0;
+    delete pfront;
+    delete pend;
+    pfront = pend = NULL;
+    cout<<"CQueue destructor!"<<endl; 
+}
+
+bool CQueue::initQueue(int len)
+{
+    
+}
+
+
+
+//insert to CQueue tail
+bool CQueue::InQueue(CMsg *in)
+{
+   if ( Currentlength >= Maxlength ) 
+   {
+      cout<<"Queue full!"<<endl;
+      return false;
+   }
+   cout<<"InQueue start1!"<<endl;
+   CMsg msgObj(in->getMsgType(), in->getMsgData());
+   CMsg *msgPtr = &msgObj;
+   cout<<"InQueue start2!"<<endl;
+   cout<<"pend->"<<pend<<endl;
+   msgPtr->pPre = pend;
+   pend->pNext = msgPtr;
+   pend = msgPtr;
+   msgPtr = NULL;
+   cout<<"InQueue start3!"<<endl;
+   Currentlength++;
+   return true;
+}
+
+
+// return quote
+// don't return the locality paramter quote.
+// but the CMsg that has been exist before the OutQueue be called.
+bool CQueue::OutQueue()
+{
+   if ((Currentlength == 0) && (pfront != NULL))
+   {
+       cout<<"queue is empty!"<<endl;
+       return false;
+   }
+
+   //only one CMsg node.
+   if(pfront->pNext == NULL)
+   {
+       delete pfront;
+       pfront = pend = NULL;
+       return true;
+       Currentlength = 0;
+   }
+   else//not the last one
+   {
+       CMsg *temp = pfront;
+       pfront = pfront->pNext;
+       pfront->pPre = NULL;
+       delete temp;
+       temp = NULL;
+       Currentlength-- ;
+       return true;
+   } 
+   return false;
+}
+
+bool CQueue::IsQueueEmpty()const
+{
+    cout<<"IsQueueEmpty start"<<endl;
+    if ( Currentlength == 0 )
+        return true;
+    else
+        return false;
+}
+
+int CQueue::getCurrLength()
+{
+    return Currentlength;
+}
+
+int CQueue::getMaxLength()
+{
+    return Maxlength;
+}
+
+void CQueue::setCurrLength(int len)
+{
+    
+}
+
+
+void CQueue::setMaxLength(int len)
+{
+
+}
+
+const CMsg& CQueue::getQueueMsg()
+{
+   if ( pfront != NULL ) 
+   {
+       return *pfront;
+   }
+}
+

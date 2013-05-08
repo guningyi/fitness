@@ -1,0 +1,90 @@
+#include "../include/unp.h"
+
+void
+Listen(int sockfd, int backlog)
+{
+    char *ptr;
+    if( (ptr = getenv("LISTENQ")) != NULL)
+        backlog = atoi(ptr);
+    if (listen(sockfd, backlog) < 0)
+        err_sys("listen error");
+
+}
+
+int
+Accept(int fd, (SA*)cliaddr, int len)
+{
+    int n;
+    do{
+        n = accept(fd, (SA*)&cliaddr, len);
+    }while(n < 0)
+    return n;
+}
+
+void
+Writen(int fd, void *ptr, size_t nbytes)
+{
+        if (writen(fd, ptr, nbytes) != nbytes)
+                err_sys("writen error");
+}
+
+
+void
+str_echo(int sockfd)
+{
+    ssize_t n;
+    char buf[MAXLINE];
+    again:
+    while((n=read(sockfd, buf, MAXLINE)) > 0)
+    {
+        Writen(sockfd, buf, n);
+    }
+    if ((n < 0) && (errno == EINTR) )
+    {
+        goto again;
+    }
+    else if ( n<0 )
+    {
+        err_sys("str_echo: read error");
+    }
+}
+
+int 
+main(int argc, char **argv)
+{
+    int listenfd, connfd;
+    pid_t childpid;
+    socklen_t clilen;
+    struct sockaddr_in cliaddr, servaddr;
+    //listenfd = Socket(AF_INET, SOCK_STREAM, 0);
+    if ( (listenfd = socket(AF_INET, SOCK_STREAM, 0)) < 0 )
+    {
+        err_sys("socket error");
+        return -1;
+    }
+    bzero(&servaddr, sizeof(servaddr)); 
+    servaddr.sin_family = AF_INET;
+    servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
+    servaddr.sin_port = htons(SERV_PORT);
+    
+    //Bind(listenfd, (SA*)&servaddr, sizeof(servaddr));
+    if (bind(listenfd, (SA*)&servaddr, sizeof(servaddr)) < 0 );
+    {
+        err_sys("bind error");
+        return -1;
+    }
+    Listen(listenfd, LISTENQ);
+    for (;;){
+        clilen = sizeof(cliaddr);
+        connfd = Accept(listenfd, (SA*)&cliaddr, sizeof(cliaddr) );
+        if ( (childpid = fork()) == 0 )
+        {
+            //Close(listenfd);
+            close(listenfd);
+            str_echo(connfd);
+            exit(0);
+        }
+    }
+    //Close(connfd);
+    close(connfd);
+}

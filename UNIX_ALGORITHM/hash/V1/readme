@@ -1,0 +1,77 @@
+/*
+
+Link and Load Problem
+
+*/
+
+
+
+--------- hashSize
+--------- hashLength
+--------- conflictNum
+
+because you initialize the variable in hash.h.
+initialize means : the compiler will alloc the memory for variable.
+
+if Lumia.cpp and hash.cpp all include the hash.h.
+it will cause the multiple definition problem.
+
+
+-------------------------------------------------------------------------------------
+[root@localhost V1]# make 
+echo Compling...hash.cpp
+Compling...hash.cpp
+g++ -c  hash.cpp -o hash.o
+echo Compling...Lumia.cpp
+Compling...Lumia.cpp
+g++ -c  Lumia.cpp -o Lumia.o
+echo  hash.o  Lumia.o
+hash.o Lumia.o
+ld -o Lumia  hash.o  Lumia.o
+Lumia.o:(.bss+0x0): multiple definition of `conflictNum'
+hash.o:(.bss+0x0): first defined here
+Lumia.o:(.data+0x0): multiple definition of `hashSize'
+hash.o:(.data+0x0): first defined here
+Lumia.o:(.bss+0x4): multiple definition of `hashLength'
+hash.o:(.bss+0x4): first defined here
+ld: warning: cannot find entry symbol _start; defaulting to 0000000008048094
+-------------------------------------------------------------------------------------
+
+
+
+That's not correct! 
+
+Indeed, declare a variable is different with initialize a variable.Even define a variable is different with declare a class.
+
+example:
+**********************************************
+
+int a; //declare
+a = 1; //initialize
+
+int b = 1; // declare and initialize
+
+
+struct c//define
+{
+  int a;
+  char* p;
+};
+*********************************************
+
+
+
+
+define a class means we tell compiler how to layout this class in memory, but not truely alloc the memory.The layout format was stored in code-segment.
+
+declare a variable means compiler alloc the memory.
+
+initialize a variable means give the value to the variable.
+
+
+
+But not the key of this ld problem.
+
+Root cause is :
+
+if you declare a variable, then it will alloc the memory

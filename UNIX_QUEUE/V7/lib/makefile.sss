@@ -1,0 +1,14 @@
+OBJ = queue.o\
+      msg.o\
+
+Lumia : $(OBJ)
+	g++ -o Lumia $(OBJ)
+queue.o: queue.cpp queue.h
+	g++ -c queue.cpp
+msg.o: msg.cpp msg.h
+	g++ -c msg.cpp
+clean:
+	rm -f *.o
+	rm -rf Lumia
+
+

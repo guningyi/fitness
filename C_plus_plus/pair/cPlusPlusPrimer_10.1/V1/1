@@ -1,0 +1,24 @@
+#include <utility>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char **argv)
+{
+    typedef pair<std::string, int> input;
+    vecotr<input> pvec;
+    input word;
+    string textWord;
+    int    num,count = 0;
+    while((cin>>textWord>>num)&& (textWord != "e"))
+    {    
+        word = make_pair(textWord, num);
+        count++;
+    }    
+    while(count-- > 0)
+    {
+        cout<<"input:"<<word.first<<" "<<word.second<<endl; 
+    }
+    return 0;
+}

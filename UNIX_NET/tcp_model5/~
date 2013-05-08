@@ -1,0 +1,16 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string>
+#include <iostream>
+#include <vector>
+#include <sys/socket.h>
+
+
+class CClient{
+public:
+ CClient();
+ virtual CClient();
+private:
+ int sockfd;
+ 
+}
