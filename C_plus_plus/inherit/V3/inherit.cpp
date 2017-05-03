@@ -46,7 +46,7 @@ class CBrassPlus:public CBrass
 int main(int argc, char **argv)
 {
     /*
- *    not use virtual, so when delete pBrass, it call the destructor, but which ?
+ *    not use virtual, so when delete pBrass, it call the destructor, but which one will be invoked?
  *    the pointer type or the pointer aim the object type.
  *    the answer is clear: if you not use the virtual, then it just call the pointer type 's destructor. 
  *  */
