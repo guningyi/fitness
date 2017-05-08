@@ -5,25 +5,29 @@ using namespace std;
 
 class Base{
 public:
-  static show(){cout << "I am Base!"<<endl;}
-  static int a = 20;
+  static void show(){cout << "I am Base!"<<endl;}
+  static int a;
+  Base(){cout<<"Base constractor!"<<endl;}
   ~Base(){cout << "destractor!"<<endl;}
-}
+};
 
 class Derived :public Base{
 public:
-  ~Derived(){
+  Derived(){cout<<"Derived constractor!"<<endl;}
+    ~Derived(){
     cout <<"I am Derived"<<endl;
   }
 
-}
+};
 
 
 int main(int argc, char ** argv)
 {
   Base *ptrBase = new Derived();
   ptrBase->show();
+  cout<<"ptrBase->a="<<ptrBase->a<<endl;
   return 1;
+
   
 
 }
