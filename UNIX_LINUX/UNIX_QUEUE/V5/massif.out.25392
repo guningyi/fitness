@@ -1,0 +1,392 @@
+desc: (none)
+cmd: ./Lumia
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1575254
+mem_heap_B=25
+mem_heap_extra_B=15
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=1581708
+mem_heap_B=62
+mem_heap_extra_B=26
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=1583271
+mem_heap_B=95
+mem_heap_extra_B=41
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=1584834
+mem_heap_B=135
+mem_heap_extra_B=49
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=1586408
+mem_heap_B=201
+mem_heap_extra_B=63
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=1589935
+mem_heap_B=225
+mem_heap_extra_B=71
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=1591405
+mem_heap_B=249
+mem_heap_extra_B=79
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=1592869
+mem_heap_B=273
+mem_heap_extra_B=87
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=1594333
+mem_heap_B=297
+mem_heap_extra_B=95
+mem_stacks_B=0
+heap_tree=detailed
+n2: 297 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 201 0x4CB608F3: std::string::_Rep::_S_create(unsigned int, unsigned int, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.16)
+  n1: 201 0x4CB62BB7: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/libstdc++.so.6.0.16)
+   n1: 201 0x4CB62D35: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.16)
+    n0: 201 0x4B77A6B1: (below main) (in /lib/libc-2.14.90.so)
+ n4: 96 0x8048C0A: CQueue::InQueue(CMsg*) (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 24 0x8049705: main (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 24 0x804971D: main (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 24 0x8049735: main (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 24 0x804974D: main (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+#-----------
+snapshot=10
+#-----------
+time=1595797
+mem_heap_B=321
+mem_heap_extra_B=103
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=1640177
+mem_heap_B=321
+mem_heap_extra_B=103
+mem_stacks_B=0
+heap_tree=detailed
+n2: 321 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 201 0x4CB608F3: std::string::_Rep::_S_create(unsigned int, unsigned int, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.16)
+  n1: 201 0x4CB62BB7: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/libstdc++.so.6.0.16)
+   n1: 201 0x4CB62D35: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.16)
+    n0: 201 0x4B77A6B1: (below main) (in /lib/libc-2.14.90.so)
+ n5: 120 0x8048C0A: CQueue::InQueue(CMsg*) (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 24 0x8049705: main (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 24 0x804971D: main (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 24 0x8049735: main (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 24 0x804974D: main (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 24 0x8049765: main (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+#-----------
+snapshot=12
+#-----------
+time=1640177
+mem_heap_B=297
+mem_heap_extra_B=95
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=1642496
+mem_heap_B=273
+mem_heap_extra_B=87
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=1644815
+mem_heap_B=249
+mem_heap_extra_B=79
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=1668492
+mem_heap_B=265
+mem_heap_extra_B=87
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=1670030
+mem_heap_B=281
+mem_heap_extra_B=95
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=1671568
+mem_heap_B=299
+mem_heap_extra_B=109
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=1677745
+mem_heap_B=315
+mem_heap_extra_B=117
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=1678051
+mem_heap_B=334
+mem_heap_extra_B=130
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=1679801
+mem_heap_B=334
+mem_heap_extra_B=130
+mem_stacks_B=0
+heap_tree=detailed
+n2: 334 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 286 0x4CB608F3: std::string::_Rep::_S_create(unsigned int, unsigned int, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.16)
+  n1: 251 0x4CB62BB7: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/libstdc++.so.6.0.16)
+   n1: 251 0x4CB62D35: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.16)
+    n0: 251 0x4B77A6B1: (below main) (in /lib/libc-2.14.90.so)
+  n0: 35 0x751A8FFE: ???
+ n3: 48 0x8048C0A: CQueue::InQueue(CMsg*) (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 24 0x804974D: main (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 24 0x8049765: main (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 0 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=21
+#-----------
+time=1679801
+mem_heap_B=318
+mem_heap_extra_B=122
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=1680080
+mem_heap_B=343
+mem_heap_extra_B=137
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=1680233
+mem_heap_B=343
+mem_heap_extra_B=137
+mem_stacks_B=0
+heap_tree=detailed
+n2: 343 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 295 0x4CB608F3: std::string::_Rep::_S_create(unsigned int, unsigned int, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.16)
+  n1: 251 0x4CB62BB7: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/libstdc++.so.6.0.16)
+   n1: 251 0x4CB62D35: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.16)
+    n0: 251 0x4B77A6B1: (below main) (in /lib/libc-2.14.90.so)
+  n0: 44 0x751A8FFE: ???
+ n3: 48 0x8048C0A: CQueue::InQueue(CMsg*) (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 24 0x804974D: main (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 24 0x8049765: main (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 0 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=24
+#-----------
+time=1680233
+mem_heap_B=324
+mem_heap_extra_B=124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=1747615
+mem_heap_B=355
+mem_heap_extra_B=133
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=1749161
+mem_heap_B=382
+mem_heap_extra_B=146
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=1762099
+mem_heap_B=382
+mem_heap_extra_B=146
+mem_stacks_B=0
+heap_tree=peak
+n2: 382 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 334 0x4CB608F3: std::string::_Rep::_S_create(unsigned int, unsigned int, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.16)
+  n1: 309 0x4CB62BB7: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/libstdc++.so.6.0.16)
+   n1: 309 0x4CB62D35: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.16)
+    n0: 309 0x4B77A6B1: (below main) (in /lib/libc-2.14.90.so)
+  n0: 25 0x751A8FFE: ???
+ n3: 48 0x8048C0A: CQueue::InQueue(CMsg*) (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 24 0x804974D: main (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 24 0x8049765: main (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 0 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=28
+#-----------
+time=1762099
+mem_heap_B=351
+mem_heap_extra_B=137
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=1770162
+mem_heap_B=324
+mem_heap_extra_B=124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=1776023
+mem_heap_B=299
+mem_heap_extra_B=109
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=1777248
+mem_heap_B=281
+mem_heap_extra_B=95
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=1778473
+mem_heap_B=265
+mem_heap_extra_B=87
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=1779698
+mem_heap_B=249
+mem_heap_extra_B=79
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=1783241
+mem_heap_B=216
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=1784466
+mem_heap_B=179
+mem_heap_extra_B=53
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=1785691
+mem_heap_B=154
+mem_heap_extra_B=38
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=1786951
+mem_heap_B=114
+mem_heap_extra_B=30
+mem_stacks_B=0
+heap_tree=detailed
+n2: 114 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 66 0x4CB608F3: std::string::_Rep::_S_create(unsigned int, unsigned int, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.16)
+  n1: 66 0x4CB62BB7: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/libstdc++.so.6.0.16)
+   n1: 66 0x4CB62D35: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.16)
+    n0: 66 0x4B77A6B1: (below main) (in /lib/libc-2.14.90.so)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n3: 48 0x8048C0A: CQueue::InQueue(CMsg*) (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 24 0x804974D: main (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 24 0x8049765: main (in /home/guningyi/Project/UNIX_QUEUE/V5/Lumia)
+  n0: 0 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=38
+#-----------
+time=1787015
+mem_heap_B=90
+mem_heap_extra_B=22
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=1788249
+mem_heap_B=24
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=1788313
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty

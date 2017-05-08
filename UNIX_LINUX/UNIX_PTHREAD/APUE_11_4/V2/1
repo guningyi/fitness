@@ -1,0 +1,54 @@
+#include<pthread.h>
+#include ""
+
+void*
+thr_fn1(void *arg)
+{
+    cout<<"thread1 returning!"<<endl;
+    return((void*)1);
+}
+
+void*
+thr_fn2(void *arg)
+{
+    cout<<"thread2 returning!"<<endl;
+    pthread_exit((void*)2);
+}
+
+int main(void)
+{
+    int err;
+    pthread_t tid1,tid2;
+    void *tret;
+    
+    err = pthread_create(&tid1, NULL, thr_fn1, NULL);
+    if (err != 0)
+    {
+        err_quit("can't create thread1: %s\n",strerror(err));
+    }
+
+    err = pthread_create(&tid2,NULL, thr_fn2, NULL);
+    if (err != 0)
+    {
+        err_quit("can't create thread2: %s\n", strerror(err));
+    }
+
+    err = pthread_join(tid1, &tret);
+    if (err != 0 )
+    {
+        err_quit("can't join with thread1 :%s\n", strerror(err));
+    }
+
+    cout<<"thread 1 exit code:"<<(int)tret<<endl;
+    err = pthread_join(tid2, &tret);
+    if (err != 0 )
+    {
+        err_quit("can't join with thread2 :%s\n", strerror(err));
+    }
+
+    cout<<"thread 2 exit code:"<<(int)tret<<endl;
+    exit(0);
+
+}
+
+

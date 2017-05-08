@@ -1,0 +1,24 @@
+CC :=gcc
+CCC :=g++
+LD :=ld
+CFLAGS :=
+LDFLAGS := -shared
+SRCS := $(wildcard *.cpp)
+OBJS := $(patsubset %.cpp, %.o, $(SRCS))
+
+TARGET_LIB := queue.so
+
+RM := -rm -rf
+
+all:$(OBJS)
+	echo $(OBJS)
+	$(LD) $(LDFLAGS) -o $(TARGRT_LIB) $(OBJS)
+
+%.o:%.cpp 
+	echo Compiling $<...
+	$(CCC) -c $(CFLAGS) $< -o $*.o 
+
+clean:
+	$(RM) $(OBJS) $(LIB) $(TARGET_LIB) *.bak *~
+
+.PHONY:all clean
